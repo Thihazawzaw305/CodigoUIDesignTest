@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.MainActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+      app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btnBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_medium_2"
+                android:layout_marginTop="@dimen/margin_xlarge"
+                android:src="@drawable/baseline_arrow_back_ios_black_24" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btnNoti"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="@dimen/margin_medium_2"
+                android:layout_marginTop="@dimen/margin_xlarge"
+                android:layout_marginEnd="@dimen/margin_medium_2"
+                android:layout_marginBottom="@dimen/margin_medium_2"
+                android:src="@drawable/baseline_notifications_none_black_24" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivLogo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:src="@drawable/logo" />
+
+            <FrameLayout
+                android:id="@+id/flBanner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ivLogo"
+                android:layout_marginTop="@dimen/margin_medium_2">
+
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/viewPagerBanner"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp" />
+
+                <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
+                    android:id="@+id/dotsIndicatorBanner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center"
+                    android:layout_marginBottom="@dimen/margin_medium"
+                    app:dotsColor="@color/white"
+                    app:dotsCornerRadius="@dimen/margin_small"
+                    app:dotsSize="@dimen/margin_medium"
+                    app:dotsSpacing="@dimen/margin_small"
+                    app:dotsWidthFactor="1.0"
+                    app:progressMode="false"
+                    app:selectedDotColor="@android:color/holo_red_dark" />
+
+            </FrameLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvbutton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/flBanner"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:layout_marginEnd="@dimen/margin_medium_2" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rvbutton"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <RelativeLayout
+                    android:id="@+id/rlEvent1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/margin_medium_2"
+                    android:layout_marginTop="@dimen/margin_medium_2"
+                    android:layout_marginBottom="@dimen/margin_medium_2"
+                    android:layout_weight="1"
+                    android:background="@drawable/ic_background"
+                    android:elevation="@dimen/margin_medium_2">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvMyETickets"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_medium_2"
+                        android:text="My e-tickets" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_margin="@dimen/margin_medium_2"
+                        android:src="@drawable/icon_v2" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvThereArentAnyYet"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tvMyETickets"
+                        android:layout_marginStart="@dimen/margin_medium_2"
+                        android:layout_marginTop="@dimen/margin_medium_2"
+                        android:layout_marginEnd="@dimen/margin_medium_2"
+                        android:layout_marginBottom="@dimen/margin_medium_2"
+                        android:text="There Aren'tAnyYet"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="@dimen/text_regular_3x"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvRetrieveHere"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tvThereArentAnyYet"
+                        android:layout_marginStart="@dimen/margin_medium_2"
+                        android:layout_marginTop="@dimen/margin_medium_2"
+                        android:layout_marginEnd="@dimen/margin_medium_2"
+                        android:layout_marginBottom="@dimen/margin_medium_2"
+                        android:text="Retrieve here"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/text_regular_2x"
+                        android:textStyle="bold" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/margin_medium_2"
+                    android:layout_marginTop="@dimen/margin_medium_2"
+                    android:layout_marginEnd="@dimen/margin_medium_2"
+                    android:layout_marginBottom="@dimen/margin_medium_2"
+                    android:layout_weight="1"
+                    android:background="@drawable/ic_background"
+                    android:elevation="@dimen/margin_medium_2">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvParkHours"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_medium_2"
+                        android:text="Park hours" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_margin="@dimen/margin_medium_2"
+                        android:src="@drawable/icons_v2_2"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvDateAndTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tvParkHours"
+                        android:layout_margin="@dimen/margin_medium_2"
+                        android:text="Today, 13 Feb 10am-5pm"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_regular_3x"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvPlanMyVisit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tvDateAndTime"
+                        android:layout_margin="@dimen/margin_medium_2"
+                        android:text="Plan my visit"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/text_regular_2x"
+                        android:textStyle="bold" />
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvUpComingShows"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/linearLayout"
+                android:layout_marginStart="@dimen/margin_medium_2"
+                android:text="@string/upcoming_show"
+                android:textSize="@dimen/text_regular_3x" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_medium_2"
+                android:layout_below="@id/linearLayout"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="@dimen/margin_medium_2"
+                android:text="@string/view_all"
+                android:textColor="@color/red"
+                android:textSize="@dimen/text_regular_2x" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:clipToPadding="false"
+                android:paddingEnd="@dimen/margin_medium_2"
+                android:id="@+id/rvUpComingShows"
+                android:layout_below="@id/tvUpComingShows"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+
+
+        </RelativeLayout>
+
+
+
+    </androidx.core.widget.NestedScrollView>
+    <include
+        android:id="@+id/buttomSheet"
+        layout="@layout/button_sheet"/>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout style="?attr/bottomSheetStyle"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    app:behavior_hideable="true"
+    android:background="@drawable/ic_background_image"
+    app:behavior_peekHeight="0dp"
+    app:layout_behavior="@string/bottom_sheet_behavior"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <FrameLayout
+
+        android:id="@+id/flImage"
+        android:layout_width="match_parent"
+        android:layout_height="300dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/banner_image"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btnCLose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/group_126"
+            android:layout_margin="@dimen/margin_medium_2"/>
+    </FrameLayout>
+
+<androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/tvZone"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="ZONE 1"
+    android:layout_below="@id/flImage"
+    android:layout_margin="@dimen/margin_medium_2"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvZoneName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Alligator Gar"
+        android:layout_below="@id/tvZone"
+        android:textSize="@dimen/text_heading_1x"
+        android:textStyle="bold"
+        android:layout_marginStart="@dimen/margin_medium_2"
+   />
+
+    <LinearLayout
+        android:id="@+id/llChipLayout"
+        android:layout_marginStart="@dimen/margin_medium_2"
+        android:layout_marginTop="@dimen/margin_medium_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvZoneName"
+        android:background="@drawable/ic_chip_background_2"
+        >
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_marginTop="13dp"
+            android:layout_marginBottom="@dimen/margin_medium"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ellipse_19"
+           />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_marginBottom="@dimen/margin_medium"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="410m away"
+            android:layout_below="@id/tvZone"
+            android:textStyle="bold"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_marginEnd="@dimen/margin_medium"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:textColor="@color/red"
+            android:layout_marginBottom="@dimen/margin_medium"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Map"
+            />
+
+
+
+
+
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_marginStart="@dimen/margin_medium_2"
+        android:layout_marginEnd="@dimen/margin_medium_2"
+        android:layout_width="match_parent"
+        android:layout_below="@id/llChipLayout"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_medium_2"
+        android:text="@string/simple_text"/>
+
+</RelativeLayout>
